@@ -1,21 +1,13 @@
 from django.shortcuts import render
-from django.views import View
 
 
-# Create your views here.
+def class_view(request):
+    return render(request, 'second_task/class_view.html')
 
-def home(request):
+
+def function_view(request):
+    return render(request, 'second_task/function_view.html')
+
+
+def home_view(request):
     return render(request, 'second_task/home.html')
-
-
-def functional_view(request):
-    return render(request, 'second_task/func_template.html')
-
-
-class ClassBasedView(View):
-    def get(self, request):
-        return render(request, 'second_task/class_template.html')
-
-
-
-

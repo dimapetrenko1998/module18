@@ -1,15 +1,15 @@
 from django.shortcuts import render
 
 
-def home(request):
-    return render(request, 'third_task/home.html')
+def index(request):
+    return render(request, 'third_task/index.html')
 
 
 def shop(request):
     items = {
-        'item1': 'Game 1',
-        'item2': 'Game 2',
-        'item3': 'Game 3'
+        'item1': 'Игровая приставка',
+        'item2': 'Компьютерные игры',
+        'item3': 'Аксессуары для игр',
     }
     return render(request, 'third_task/shop.html', {'items': items})
 

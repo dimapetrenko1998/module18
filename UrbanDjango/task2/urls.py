@@ -1,8 +1,8 @@
 from django.urls import path
-from .views import functional_view, ClassBasedView, home
+from .views import class_view, function_view, home_view
 
 urlpatterns = [
-    path('', home, name='home'),
-    path('func/', functional_view, name='functional_view'),
-    path('class/', ClassBasedView.as_view(), name='class_view'),
+    path('', home_view, name='home'),
+    path('class/', class_view, name='class_view'),
+    path('function/', function_view, name='function_view'),
 ]
